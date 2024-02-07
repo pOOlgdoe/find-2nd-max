@@ -1,0 +1,20 @@
+import random
+A = []
+for i in range(10):
+  A.append(random.randint(-13,13))
+
+for i in range(len(A)):
+  if i == 0:
+    max = A[0]
+  if max < A[i]:
+    # max = A[i]
+    max2 = max
+    max = A[i]
+  if max > A[i] and max2 < A[i]:
+    max2 = A[i]
+
+A.sort()
+print(A)
+
+print("largest",max)
+print("second largest",max2)
